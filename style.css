@@ -7,11 +7,17 @@
 .Light{
     --color: #ffffff;
     --font: orangered;
+    --fontColor: black;
+    --bgColor: rgba(255, 255, 255, 0.1);
+    --fontColor2: rgba(0,0,0,0.6);
 }
 
 .Dark{
-    --color: #111111;
+    --color: #0f0617;
     --font: orangered;
+    --fontColor: #ffffff;
+    --bgColor: rgba(255, 255, 255, 0.1);
+    --fontColor2: rgba(255,255,255,0.6);
 }
 
 html,body{
@@ -43,6 +49,9 @@ a{
         color: var(--font);
     }
     z-index: 10;
+    i{
+        font-size: 2rem;
+    }
 }
 
 #logo{
@@ -60,6 +69,10 @@ a{
     background-color: var(--color);
     width: 30rem;
     height: 2rem;
+    transition: all 0.2s;
+    a{
+        background-color: var(--bgColor);
+    }
 }
 
 .search-bar:hover{
@@ -67,7 +80,7 @@ a{
 }
 
 .search-bar select{
-    background-color: var(--color);
+    background-color: var(--bgColor);
     color: var(--font);
     width: 50px;
     text-align: center;
@@ -79,7 +92,7 @@ a{
     width: 100%;
     font-size: 0.9rem;
     border: none;
-    background-color: var(--color);
+    background-color: var(--bgColor);
 }
 
 .search-bar div{
@@ -88,7 +101,7 @@ a{
    justify-content: center;
    align-items: center;
    font-size: 1.2rem;
-   background-color: var(--font);
+   background-color: var(--bgColor);
    border-top-right-radius: 50px;
    border-bottom-right-radius: 50px;
    color: #0F1111;
@@ -107,10 +120,6 @@ a{
     padding-left: 2rem;
     display: flex;
     align-items: center;
-}
-
-i{
-    font-size: 2rem;
 }
 
 .search-bar{
@@ -220,17 +229,18 @@ i{
     }
 }
 .pics{
-    background-color: #eeeeee;
+    background-color: var(--bgColor);
+    backdrop-filter: blur(10px);
     padding-top: rem;
     display: flex;
     width: 100%;
 }
 
 .part1{
-    h1{color: #0F1111;
+    h1{color: var(--fontColor);
         font-size: 2rem;
     }
-    color: #aaaaaa;
+    color: var(--fontColor2);
     width: 30%;
     padding: 10rem 5rem 0;
     .buy{
@@ -271,6 +281,9 @@ i{
         height: 100%;
     }
 }
+.part2::-webkit-scrollbar {
+    display: none;
+}
 .slide{
     width: 100%;
     height: 70vh;
@@ -308,8 +321,8 @@ i{
     display: grid;
     grid-template-columns: repeat(4,25%);
     /* padding: rem; */
-    margin: 2% 8%;
-    background-color: #eeeeee50;
+    margin: 4% 5%;
+    background-color: var(--bgColor);
     border-radius: 10px;
     justify-content: space-around;
     box-shadow: 0px 0 10px;
@@ -321,9 +334,10 @@ i{
         column-gap: 0.5rem;
         align-items: center;
         justify-content: flex-start;
-        color: black;
+        color: var(--fontColor);
         i{
             color: var(--font);
+            font-size: 2rem;
         }
     }
 }
@@ -339,5 +353,96 @@ i{
     .advantage .adbox{
         grid-template-columns: repeat(1,1fr);
         grid-template-rows: repeat(4,1fr);
+    }
+}
+
+/* Trending section */
+.bestSelling{
+    margin: 4% 5%;
+    color: var(--fontColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .heading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 1.5%;
+        .line{
+            background-color: var(--fontColor);
+            opacity: 0.5;
+            width: 70%;
+            height: 2px;
+        }
+        .showmore{
+            color: var(--fontColor);
+            font-size: 0.8rem;
+            margin-left: 2%;
+        }
+        
+    }
+    .cardContainer{
+        display: grid;
+        margin: 2rem;
+        grid-template-columns: repeat(6, 25%);
+        grid-template-rows: repeat(1, minmax(300px,500px));
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        .card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .cardContainer::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.content{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+
+    height: 90%;
+    width: 80%;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .cardimage{
+        object-fit: cover;
+        height: 70%;
+        width: 100%;
+        border-radius: 20px;
+    }
+    .cardbookname{
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    .bookauthor{
+        opacity: 0.6;
+    }
+    .rating{
+        color: gold;
+    }
+    .price{
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:600px){
+    .bestSelling .cardContainer{
+        grid-template-columns: repeat(6, 100%);
+    }
+}
+@media (min-width : 601px) and (max-width:1000px){
+    .bestSelling .cardContainer{
+        grid-template-columns: repeat(6, 50%);
     }
 }
