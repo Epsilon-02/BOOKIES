@@ -1,6 +1,6 @@
 var body = document.querySelector("body");
 var btn = document.querySelector(".mode");
-var flag1 = 1;
+var flag1 = 0;
 btn.addEventListener("click",mode);
 function mode(){
     if(flag1 == 0){
@@ -21,12 +21,12 @@ function mode(){
 // lets make ham-burger
 
 var menu = document.querySelector(".toggle");
-var flag = 1;
+var flag = 0;
 function menuBar(){ 
     if( flag == 0){
-        menu.style.display = "none";
+        menu.style.right = "0";
         flag =1;
-    }else{ menu.style.display = "block";
+    }else{ menu.style.right = "-250px";
            flag = 0;
          }
 }
@@ -124,6 +124,18 @@ var slide = [
       name:"Vampyres",
       price:"$42",
       author:"Lord Baryon"
+    },
+    {
+      pic:"https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name:"Milk and Honey",
+      price:"$45",
+      author:"Rupi Kaur"
+    },
+    {
+      pic:"https://images.unsplash.com/photo-1647529735054-9b68c881fdc9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "Six Second Story",
+      price: "$56",
+      author: "B. Rain Bennett"
     }
   ];
   var booksLength = books.length;
@@ -132,12 +144,12 @@ var slide = [
   var clutter2 = "";
 
   books.forEach((obj,idx)=>{
-    clutter2 += `<div class='card' id="${idx}">
+    clutter2 += `<div class='card book-item' data-id="${idx}">
     <div class='content'>
         <img src="${obj.pic}" alt="${obj.name}" class='cardimage'>
-        <div class='carddetail'>
-            <div class='${'cardbookname'}'>${obj.name}</div>
-            <div class='rating'>
+        <div class='carddetail' id="${idx}">
+            <div class='cardbookname'>${obj.name}</div>
+            <div class='rating' id="${idx}">
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star'></i>
@@ -160,16 +172,69 @@ var slide = [
   
       if (p < booksLength + 1) {
           setTimeout(() => {
-              container.scrollBy(b * 200, 0);
+              container.scrollBy(b * 300, 0);
               i++;
               scrollbook(); 
           }, 2000);
       } else {
           setTimeout(() => {
-              container.scrollBy(-b * 200, 0);
+              container.scrollBy(-b * 300, 0);
               i++;
               scrollbook(); 
           }, 2000);
       }
   }
   scrollbook();
+
+  // modal box
+
+  var modal = document.querySelector(".modalbox");
+  var close = document.querySelector(".closemodal");
+  
+  function generateModalContent(book) {
+    return `
+        <div class='message'>
+            <a href="" class='closemodal'><i class='bx bx-x'></i></a>
+            <div class='modalinfo'>
+                <div class='modalpic'>
+                    <div><img src="${book.pic}" alt="${book.name}"></div>
+                </div>
+                <div class='modalcontent'>
+                    <div class='modalbookname'>${book.name}</div>
+                    <div class='modalbookrating'>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bx-star'></i>
+                    </div>
+                    <div class='modalbookauthor'>${book.author}</div>
+                    <div class='modalbookprice'>${book.price}</div>
+                    <div class='addcart'><button><i class='bx bx-cart-download'></i>Add to cart</button></div>
+                    <div class='modalabout'>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facilis tempora explicabo recusandae numquam ex! Ea, eum debitis maiores dolores repudiandae libero, deleniti quae soluta culpa, laborum rerum perferendis voluptas. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ducimus ad natus porro fuga magni placeat blanditiis cupiditate explicabo temporibus, odio vel eligendi error! Perspiciatis maxime ducimus molestiae esse reprehenderit!
+                    </div>
+                </div>
+            </div>
+        </div>`;
+}
+
+// Event delegation on the container
+container.addEventListener("click", (event) => {
+    const clickedElement = event.target;
+    const bookItem = clickedElement.closest('.book-item');
+
+    if (bookItem) {
+        const idx = bookItem.dataset.id;
+        const book = books[idx];
+
+        // Display modal with the book details
+        modal.style.display = "flex";
+        modal.innerHTML = generateModalContent(book);
+    }
+});
+
+// Event listener for the close button
+close.addEventListener("click", () => {
+    modal.style.display = "none";
+});
