@@ -372,7 +372,7 @@ a{
 }
 
 /* Trending section */
-.bestSelling{
+.Selling{
     margin: 4% 5%;
     color: var(--fontColor);
     display: flex;
@@ -452,12 +452,12 @@ a{
 }
 
 @media (max-width:600px){
-    .bestSelling .cardContainer{
+    .Selling .cardContainer{
         grid-template-columns: repeat(8, 100%);
     }
 }
 @media (min-width : 601px) and (max-width:1000px){
-    .bestSelling .cardContainer{
+    .Selling .cardContainer{
         grid-template-columns: repeat(8, 50%);
     }
 }

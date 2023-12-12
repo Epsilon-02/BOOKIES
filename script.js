@@ -88,7 +88,7 @@ var slide = [
 
   // Trending books
 
-  var books = [
+    const books = [
     {
       pic:"https://images.unsplash.com/photo-1641154748135-8032a61a3f80?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name:"Company of One",
@@ -139,8 +139,7 @@ var slide = [
     }
   ];
   var booksLength = books.length;
-
-  var container = document.querySelector(".cardContainer");
+  var container1 = document.querySelector(".cardContainer1");
   var clutter2 = "";
 
   books.forEach((obj,idx)=>{
@@ -163,10 +162,10 @@ var slide = [
 </div>`;
   })
 
-  container.innerHTML = clutter2;
+  container1.innerHTML = clutter2;
 
 
-    function scrollbook() {
+    function scrollbook(container) {
       let b = i % booksLength;
       let p = i % (booksLength * 2);
   
@@ -174,22 +173,46 @@ var slide = [
           setTimeout(() => {
               container.scrollBy(b * 50, 0);
               i++;
-              scrollbook(); 
+              scrollbook(container); 
           }, 2000);
       } else {
           setTimeout(() => {
               container.scrollBy(-b * 50, 0);
               i++;
-              scrollbook(); 
+              scrollbook(container); 
           }, 2000);
       }
   }
-  scrollbook();
+  scrollbook(container1);
+
+  // Recommendations 
+  var clutter3 = "";
+  books.forEach((obj,idx)=>{
+    clutter3 += `<div class='card book-item' data-id="${idx}">
+    <div class='content'>
+        <img src="${obj.pic}" alt="${obj.name}" class='cardimage'>
+        <div class='carddetail' id="${idx}">
+            <div class='cardbookname'>${obj.name}</div>
+            <div class='rating' id="${idx}">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bx-star'></i>
+            </div>
+            <div class='bookauthor'>${obj.author}</div>
+            <div class='price'>${obj.price}</div>
+        </div>
+    </div>
+</div>`;
+  })
+  var container2 = document.querySelector(".cardContainer2");
+
+  container2.innerHTML = clutter3;
+
+  scrollbook(container2);
 
   // modal box
-
-  var modal = document.querySelector(".modalbox");
-  var close = document.querySelector(".closemodal");
   
   function generateModalContent(book) {
     return `
@@ -219,8 +242,12 @@ var slide = [
         </div>`;
 }
 
+var modal = document.querySelector(".modalbox");
+var close = document.querySelector(".closemodal");
+console.log(close);
+
 // Event delegation on the container
-container.addEventListener("click", (event) => {
+container1.addEventListener("click", (event) => {
     const clickedElement = event.target;
     const bookItem = clickedElement.closest('.book-item');
 
