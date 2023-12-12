@@ -217,7 +217,7 @@ var slide = [
   function generateModalContent(book) {
     return `
         <div class='message'>
-            <a href="" class='closemodal'><i class='bx bx-x'></i></a>
+            <span class='closemodal'><i class='bx bx-x'></i></span>
             <div class='modalinfo'>
                 <div class='modalpic'>
                     <div><img src="${book.pic}" alt="${book.name}"></div>
