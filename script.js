@@ -243,11 +243,12 @@ var slide = [
 }
 
 var modal = document.querySelector(".modalbox");
-var close = document.querySelector(".closemodal");
-console.log(close);
+
+// var container = document.querySelector(".cardContainer");
 
 // Event delegation on the container
-container1.addEventListener("click", (event) => {
+function modaltoggle(container){
+container.addEventListener("click", (event) => {
     const clickedElement = event.target;
     const bookItem = clickedElement.closest('.book-item');
 
@@ -258,10 +259,15 @@ container1.addEventListener("click", (event) => {
         // Display modal with the book details
         modal.style.display = "flex";
         modal.innerHTML = generateModalContent(book);
+        // Event listener for the close button
+        var close = document.querySelector(".closemodal");
+        close.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
     }
 });
+}
 
-// Event listener for the close button
-close.addEventListener("click", () => {
-    modal.style.display = "none";
-});
+modaltoggle(container1);
+modaltoggle(container2);
+
