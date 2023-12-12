@@ -172,13 +172,13 @@ var slide = [
   
       if (p < booksLength + 1) {
           setTimeout(() => {
-              container.scrollBy(b * 300, 0);
+              container.scrollBy(b * 50, 0);
               i++;
               scrollbook(); 
           }, 2000);
       } else {
           setTimeout(() => {
-              container.scrollBy(-b * 300, 0);
+              container.scrollBy(-b * 50, 0);
               i++;
               scrollbook(); 
           }, 2000);
