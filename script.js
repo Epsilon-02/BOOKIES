@@ -165,7 +165,7 @@ var slide = [
   container1.innerHTML = clutter2;
 
 
-    function scrollbook(container) {
+    function scrollbook(container,i) {
       let b = i % booksLength;
       let p = i % (booksLength * 2);
   
@@ -173,17 +173,18 @@ var slide = [
           setTimeout(() => {
               container.scrollBy(b * 50, 0);
               i++;
-              scrollbook(container); 
+              scrollbook(container,i); 
           }, 2000);
       } else {
           setTimeout(() => {
               container.scrollBy(-b * 50, 0);
               i++;
-              scrollbook(container); 
+              scrollbook(container,i); 
           }, 2000);
       }
   }
-  scrollbook(container1);
+  let c=0;
+  scrollbook(container1,c);
 
   // Recommendations 
   var clutter3 = "";
@@ -209,8 +210,8 @@ var slide = [
   var container2 = document.querySelector(".cardContainer2");
 
   container2.innerHTML = clutter3;
-
-  scrollbook(container2);
+  let d=0;
+  scrollbook(container2,d);
 
   // modal box
   
