@@ -1,20 +1,29 @@
 var body = document.querySelector("body");
-var btn = document.querySelector(".mode");
-var flag1 = 0;
-btn.addEventListener("click", mode);
+var btns = document.querySelectorAll(".mode");
+let flag1 = 0;
+
 function mode() {
   if (flag1 == 0) {
-    btn.innerHTML = "Light mode";
-    body.classList.remove("Dark");
-    body.classList.add("Light");
+    btns.forEach(btn => {
+      btn.innerHTML = "Light mode";
+      body.classList.remove("Dark");
+      body.classList.add("Light");
+    });
     flag1 = 1;
   } else {
-    btn.innerHTML = "Dark mode";
-    body.classList.remove("Light");
-    body.classList.add("Dark");
+    btns.forEach(btn => {
+      btn.innerHTML = "Dark mode";
+      body.classList.remove("Light");
+      body.classList.add("Dark");
+    });
     flag1 = 0;
   }
 }
+
+btns.forEach(btn => {
+  btn.addEventListener("click", mode);
+});
+
 
 
 // lets make ham-burger
