@@ -812,7 +812,7 @@ a{
 
 footer{
     display: flex;
-    margin: 2rem;
+    margin: 3rem;
     color: var(--fontColor);
 }
 
@@ -828,6 +828,7 @@ footer a{
 .f-r1{
     display: grid;
     grid-template-columns: 15% 15% 30% 15% 15%;
+    justify-content: space-around;
 }
 
 .f-r1 :nth-child(3){
@@ -840,6 +841,7 @@ footer a{
 
 .fcolumn{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
