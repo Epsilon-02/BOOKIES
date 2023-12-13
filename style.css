@@ -859,6 +859,10 @@ footer a{
     font-size: 2rem;
 }
 
+.f-r1 :nth-child(3) .social-icons i{
+    color: var(--fontColor);
+}
+
 .f-r1 :nth-child(3) p{text-align: center;}
 
 @media (max-width:1024px){
