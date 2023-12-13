@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="Dark">
     <nav class="main">
         <div id="logo">BOOKIES</div>
@@ -21,26 +23,27 @@
         </div>
         <ul class="nav-icons">
             <li><a href=""><i class='bx bxl-shopify'></i></a></li>
-            <li><a href=""><i class='bx bx-cart' ></i></a></li>
+            <li><a href=""><i class='bx bx-cart'></i></a></li>
             <li><a href="">Login</a></li>
         </ul>
         <div class="menu-btn" onclick=menuBar()><i class='bx bx-menu'></i></div>
     </nav>
     <nav class="toggle">
-        <div class="btn-div">BOOKIES<div class="menu-btn" onclick=menuBar()><i class='bx bx-x'></i></div></div>
+        <div class="btn-div">BOOKIES<div class="menu-btn" onclick=menuBar()><i class='bx bx-x'></i></div>
+        </div>
         <ul>
-            <li class="tg-bx">Home</li>
-            <li class="tg-bx">Shop</li>
-            <li class="tg-bx">Cart</li>
+            <li class="tg-bx"><a href="#home">Home</a></li>
+            <li class="tg-bx"><a href="">Shop</a></li>
+            <li class="tg-bx"><a href="">Cart</a></li>
             <li class="tg-bx"><a class="mode">Dark Mode</a></li>
-            <li class="tg-bx">Login</li>
+            <li class="tg-bx"><a href="" class="login">Login</a></li>
         </ul>
     </nav>
 
-    <section class="pics">
+    <section class="pics" id="home">
         <div class="part1">
             <h1>Find Your <br> Favorite Books</h1>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Tempora beatae recusandae minus id. 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Tempora beatae recusandae minus id.
             <br><button class="buy"><i class='bx bx-book-open'></i>Shop Now</button>
         </div>
         <div class="part2">
@@ -50,19 +53,19 @@
     <section class="advantage">
         <div class="adbox">
             <div class="points"><i class='bx bx-refresh'></i>Easy Return</div>
-            <div class="points"><i class='bx bxs-package' ></i>Free Delivery</div>
-            <div class="points"><i class='bx bx-purchase-tag' ></i>Best Price and Offer</div>
-            <div class="points"><i class='bx bxs-hot' ></i>Great Daily Deal</div>
+            <div class="points"><i class='bx bxs-package'></i>Free Delivery</div>
+            <div class="points"><i class='bx bx-purchase-tag'></i>Best Price and Offer</div>
+            <div class="points"><i class='bx bxs-hot'></i>Great Daily Deal</div>
         </div>
     </section>
 
     <section class="Selling">
-        <h1 class="heading">Trending Books 
+        <h1 class="heading">Trending Books
             <div class="line"></div>
             <a href="" class="showmore">Show more</a>
         </h1>
         <div class="cardContainer cardContainer1">
-            
+
         </div>
     </section>
 
@@ -76,7 +79,7 @@
             <a href="" class="showmore">Show more</a>
         </h1>
         <div class="cardContainer cardContainer2">
-            
+
         </div>
     </section>
 
@@ -85,21 +88,26 @@
             <div class="genre">Genre</div>
             <h1 class="genre-type">Philosphy</h1>
             <div class="genreabout">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo deserunt, totam esse reprehenderit perferendis, illo consectetur recusandae minus ipsum nemo molestiae eum ea sequi veritatis animi? Aliquam atque odit harum?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo deserunt, totam esse reprehenderit
+                perferendis, illo consectetur recusandae minus ipsum nemo molestiae eum ea sequi veritatis animi?
+                Aliquam atque odit harum?
             </div>
             <div class="viewmore"><button><i class='bx bxs-hand-up'></i>View More</button></div>
         </div>
         <div class="banbooks">
             <div class="bancard">
-                <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                <div class="bancardcontent">Company of One<br> $52.40</div>
+                <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <div class="bancardcontent">Paul's Company of One<br> $52.40</div>
             </div>
             <div class="bancard">
-                <img src="https://images.unsplash.com/photo-1592496431122-2349e0fbc666?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                <div class="bancardcontent">The Psychology of money<br> $59.85</div>
+                <img src="https://images.unsplash.com/photo-1592496431122-2349e0fbc666?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <div class="bancardcontent">Psychology of money<br> $59.85</div>
             </div>
             <div class="bancard">
-                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
                 <div class="bancardcontent">How Innovation Works<br> $60.54</div>
             </div>
         </div>
@@ -107,27 +115,39 @@
     <section class="banner banner2">
         <div class="banbooks">
             <div class="bancard">
-                <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                <div class="bancardcontent">Company of One<br> $52.40</div>
+                <img src="https://images.unsplash.com/photo-1635007129134-814c0b7c777e?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <div class="bancardcontent">The Dead Zone<br> $62.40</div>
             </div>
             <div class="bancard">
-                <img src="https://images.unsplash.com/photo-1592496431122-2349e0fbc666?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                <div class="bancardcontent">The Psychology of money<br> $59.85</div>
+                <img src="https://images.unsplash.com/photo-1500099817043-86d46000d58f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <div class="bancardcontent">The Sea Devil<br> $54.85</div>
             </div>
             <div class="bancard">
-                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                <div class="bancardcontent">How Innovation Works<br> $60.54</div>
+                <img src="https://images.unsplash.com/photo-1515202913167-d9a698095ebf?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <div class="bancardcontent">Yuki Onna<br> $56.54</div>
             </div>
         </div>
         <div class="banmsg">
             <div class="genre">Genre</div>
             <h1 class="genre-type">Horror</h1>
             <div class="genreabout">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo deserunt, totam esse reprehenderit perferendis, illo consectetur recusandae minus ipsum nemo molestiae eum ea sequi veritatis animi? Aliquam atque odit harum?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo deserunt, totam esse reprehenderit
+                perferendis, illo consectetur recusandae minus ipsum nemo molestiae eum ea sequi veritatis animi?
+                Aliquam atque odit harum?
             </div>
             <div class="viewmore"><button><i class='bx bxs-hand-up'></i>View More</button></div>
         </div>
     </section>
+    <section class="comingsoon">
+        <h1>Comming Soon</h1>
+        <div class="upcoming">
+            
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
+
 </html>
