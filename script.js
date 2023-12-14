@@ -44,19 +44,19 @@ function menuBar() {
 
 var slide = [
   {
-    p: "https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    p: "https://images.unsplash.com/photo-1641154729273-063ed774729e?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     text: "Royal"
   },
   {
-    p: "https://images.unsplash.com/photo-1476275466078-4007374efbbe?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    p: "https://images.unsplash.com/photo-1511987264940-3cb4d81da258?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     text: "Elegant"
   },
   {
-    p: "https://images.unsplash.com/photo-1512580770426-cbed71c40e94?q=80&w=1814&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    p: "https://images.unsplash.com/photo-1667039487342-bb590d533429?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     text: "Aesthetic"
   },
   {
-    p: "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1798&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    p: "https://images.unsplash.com/photo-1667039487341-041db260dd87?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     text: "Book stack"
   }
 ];
@@ -102,49 +102,57 @@ const books = [
     pic: "https://images.unsplash.com/photo-1641154748135-8032a61a3f80?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "Company of One",
     price: "$52",
-    author: "Paul Jarvis"
+    author: "Paul Jarvis",
+    about:"Enter the realm of entrepreneurship on your own terms with Paul Jarvis' 'Company of One.' In this empowering guide, Jarvis challenges conventional business wisdom, encouraging you to embrace the benefits of staying small and agile. Navigate the landscape of self-employment, redefine success, and discover the art of building a business that perfectly fits your vision. 'Company of One' is your roadmap to creating a sustainable and fulfilling venture on your terms. Redefine success and embrace the power of your individual journey today."
   },
   {
     pic: "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "The Psychology of Money",
     price: "$69",
-    author: "Morgan Housel"
+    author: "Morgan Housel",
+    about:"Master the art of wealth through the lens of psychology with 'The Psychology of Money.' Morgan Housel's insightful exploration unveils the secrets behind financial decisions, making this book an essential guide to a more prosperous and enlightened future. Elevate your financial intelligence – read it today!"
   },
   {
     pic: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "How Innovation Works",
     price: "$59",
-    author: "Matt Ridley"
+    author: "Matt Ridley",
+    about:"Join the innovative journey with Matt Ridley's 'How Innovation Works.' Explore the dynamic landscape where creativity meets progress, and ideas evolve into transformative breakthroughs. Ridley's compelling narrative unravels the secrets behind human ingenuity and the power of innovation. Embark on a captivating exploration of 'How Innovation Works' and discover the driving force behind the advancements that shape our world. Elevate your understanding of progress and creativity with this insightful masterpiece."
   },
   {
     pic: "https://images.unsplash.com/photo-1633477189729-9290b3261d0a?q=80&w=1922&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "The Picture of Dorian Gray",
     price: "$54",
-    author: "Oscar Wilde"
+    author: "Oscar Wilde",
+    about:"Step into the opulent world of 'The Picture of Dorian Gray' by Oscar Wilde. This timeless masterpiece unfolds the gripping tale of Dorian Gray, a young man whose portrait ages while he remains eternally youthful. Wilde's exquisite prose explores the dark allure of decadence and the consequences of indulgence, making this novel a haunting reflection on beauty, morality, and the pursuit of pleasure. Immerse yourself in the captivating narrative that has enchanted readers for generations, as Wilde's exploration of the human soul takes center stage in this literary classic."
   },
   {
     pic: "https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "The Two Towers",
     price: "$63",
-    author: "J.R.R. Tolkien"
+    author: "J.R.R. Tolkien",
+    about:"Embark on an epic journey with J.R.R. Tolkien's 'The Two Towers,' the second installment in the iconic 'The Lord of the Rings' trilogy. As the fellowship fractures, the story unfolds in the vast landscapes of Middle-earth, weaving together the fates of its diverse characters. Tolkien's masterful storytelling and vivid world-building come to life, delivering a tale of courage, friendship, and the relentless struggle against the forces of darkness. Join the quest to save Middle-earth and experience the magic of 'The Two Towers' as it continues the grand adventure set in motion in 'The Fellowship of the Ring.'"
   },
   {
     pic: "https://images.unsplash.com/photo-1603162590176-7418e6b00ea4?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "Vampyres",
     price: "$42",
-    author: "Lord Baryon"
+    author: "Lord Baryon",
+    about:"Indulge your senses in the captivating world of 'Vampyres' by Lord Baryon. This enchanting tale immerses readers in a realm of dark allure, where shadows whisper secrets and passion intertwines with the supernatural. Lord Baryon's storytelling prowess weaves a spellbinding narrative, inviting you to surrender to the mysteries of the night. Unleash your imagination and embrace the seductive power of 'Vampyres'—a mesmerizing journey into the heart of darkness."
   },
   {
     pic: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "Milk and Honey",
     price: "$45",
-    author: "Rupi Kaur"
+    author: "Rupi Kaur",
+    about:"Dive into the soul-stirring world of 'Milk and Honey' by Rupi Kaur. This poetic masterpiece is a delicate blend of raw emotions and empowering verses, offering a journey through love, loss, and healing. With brevity and profound simplicity, Kaur's words resonate, making this collection a timeless exploration of the human experience. Immerse yourself in the beauty of 'Milk and Honey'—where poetry becomes a powerful vessel for self-discovery and resilience"
   },
   {
     pic: "https://images.unsplash.com/photo-1647529735054-9b68c881fdc9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "Six Second Story",
     price: "$56",
-    author: "B. Rain Bennett"
+    author: "B. Rain Bennett",
+    about:"So, you've hit a wall with your marketing strategy. You're struggling to connect with your target audience and retain their business. You've tried the social media thing, but your engagement is lower than you'd like it to be. And you're selling something impactful, but for some reason, no one seems all that interested. You're frustrated and tired. Something needs to change, but you don't know where to start. Well, this book is where to start. Six Second Stories: Maximize Your Impact in Minimal Time with Video Storytelling was written with you in mind -- the beginner storyteller, entrepreneur, small business owner, nonprofit director, content creator, or influencer. Filmmaker and storytelling expert, Rain Bennett, will walk you through how to utilize the power of storytelling via video as a key marketing technique to help boost your overall audience engagement, and keep them engaged for the long haul. We discuss why storytelling is critical to your business's success, the specifics of where and how to tell a good story, the science behind why storytelling works, and so much more. After reading this book, you'll be well on your way to creating lasting connections with your audience and growing your business more than you thought possible!"
   }
 ];
 var booksLength = books.length;
@@ -245,7 +253,7 @@ function generateModalContent(book) {
                     <div class='modalbookprice'>${book.price}</div>
                     <div class='addcart'><button><i class='bx bx-cart-download'></i>Add to cart</button></div>
                     <div class='modalabout'>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facilis tempora explicabo recusandae numquam ex! Ea, eum debitis maiores dolores repudiandae libero, deleniti quae soluta culpa, laborum rerum perferendis voluptas. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ducimus ad natus porro fuga magni placeat blanditiis cupiditate explicabo temporibus, odio vel eligendi error! Perspiciatis maxime ducimus molestiae esse reprehenderit!
+                        ${book.about}
                     </div>
                 </div>
             </div>
@@ -271,6 +279,13 @@ function modaltoggle(container) {
       var close = document.querySelector(".closemodal");
       close.addEventListener("click", () => {
         modal.style.display = "none";
+      });
+      // Event listener to close modal when clicking outside
+      var msg = document.querySelector(".message");
+      document.addEventListener("click", (event) => {
+        if (!msg.contains(event.target) && !container.contains(event.target)) {
+          modal.style.display = "none";
+        }
       });
     }
   });
