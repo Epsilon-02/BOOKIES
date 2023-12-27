@@ -1,0 +1,222 @@
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* footer{
+    position: absolute;
+    bottom: 0;
+} */
+
+/* .CartSection{
+    width: 100%;
+    display: grid;
+    place-content: center;
+} */
+
+.Cart{
+    /* height: 100%;
+    width: 100%; */
+    background-color: var(--bgColor);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    color: var(--fontColor);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.Heading{
+    display: grid;
+    grid-template-columns: 50% 10% 15% 15% 10%;
+    grid-template-rows: 1fr 1fr;
+    height: 20%;
+}
+.Heading span{
+    display: grid;
+    place-content: center;
+}
+
+#headingHr{
+    grid-column: 1/6;
+    grid-row: 2/3;
+    border: 1px solid var(--font); 
+    height: 0;
+    margin: 0 2rem;
+}
+
+.cartItem {
+    display: grid;
+    height: 10rem;
+    grid-template-columns: 50% 10% 15% 15% 10%;
+    border: 2px solid var(--font);
+    padding: 1rem;
+    margin: 1rem;
+    position: relative;
+}
+
+@media (max-width:800px) {
+    .Heading{display: none;}
+    .Cart{
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+    }
+    .itemsList{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .cartItem{
+        /* grid-template-columns: 1fr;
+        grid-template-rows: 50% 10% 15% 15% 10%; */
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        background-color: var(--bgColor);
+        border-radius: 20px;
+    }
+    .cartBook{
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+    .Total::before{
+        content: 'Total';
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    .bookPrice::before{
+        content: 'Price';
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    .Quantity::before{
+        content: 'Quantity';
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    .cartItem .flex{
+        justify-content: space-between;
+    }
+    .close{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .shippingContainer{
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cartBook {
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img-block {
+    height: 100%;
+}
+
+.img-block img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 10px;
+}
+.quantity{
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.quantity .number{
+    background-color: var(--bgColor);
+    border: none;
+    border-radius: 5px;
+    width: 2rem;
+    height: 2.5rem;
+    text-align: center;
+    color: var(--fontColor);
+}
+
+.increment, .decrement{
+    background-color: var(--bgColor);
+    color: var(--font);
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    width: 1.5rem;
+    height: 2rem;
+}
+
+.close{
+    font-size: 2rem;
+    color: var(--font);
+}
+
+/* Shipping */
+
+.shippingContainer{
+    background-color: var(--bgColor);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--fontColor);
+}
+
+.shippingMode{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.grandTotal{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.grandTotal div{
+    display: flex;
+    justify-content: space-between;
+    width: 15rem;
+}
+
+.checkOut button{
+    border: none;
+    border-radius: 20px;
+    color: var(--fontColor);
+    background-color: var(--font);
+    /* width: 12rem; */
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-property: color, background-color, scale;
+    transition-duration: 0.5s;
+}
+
+.checkOut button i{
+    font-size: 1.5rem;
+}
+
+.checkOut button:hover{
+    scale: 1.1;
+    color: var(--font);
+    background-color: var(--fontColor);
+}
+
+input[type='radio'] {
+    accent-color: var(--font);
+}

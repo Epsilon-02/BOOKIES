@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elysian</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+</head>
+
+<body class="Dark">
+    <!-- Menu -->
+    <nav class="main">
+        <div id="logo">Elysian</div>
+        <div class="search-bar">
+            <select class="search-select">
+                <option>All</option>
+            </select>
+            <input type="text" placeholder="Search Books">
+            <a class="search-icon">
+                <i class='bx bx-search'></i>
+            </a>
+        </div>
+        <ul class="nav-icons">
+            <li><a href=""><i class='bx bxl-shopify'></i></a></li>
+            <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
+            <li><a href="">Login</a></li>
+        </ul>
+        <div class="menu-btn" onclick=menuBar()><i class='bx bx-menu'></i></div>
+    </nav>
+    <nav class="toggle">
+        <div class="btn-div">Elysian<div class="menu-btn" onclick=menuBar()><i class='bx bx-x'></i></div>
+        </div>
+        <ul>
+            <li class="tg-bx"><a href="index.html">Home</a></li>
+            <li class="tg-bx"><a href="">Shop</a></li>
+            <li class="tg-bx"><a href="#home">Cart</a></li>
+            <li class="tg-bx"><a class="mode">Dark Mode</a></li>
+            <li class="tg-bx"><a href="" class="login">Login</a></li>
+        </ul>
+    </nav>
+    <!-- Hero Section -->
+    <section class="pics" id="home">
+        <div class="part1">
+            <h1>Cart</h1>
+            Elevate your reading experience with our elegant books – where every page is a masterpiece of refined
+            storytelling. Dive into sophistication today!
+            <br><button class="buy"><i class='bx bx-book-open'></i>Shop Now</button>
+        </div>
+        <div class="part2">
+        </div>
+    </section>
+    <!-- Cart Section -->
+    <section class="CartSection">
+        <div class="Cart">
+            <div class="Heading">
+                <span>Book</span><span>Price</span><span>Quantity</span><span>Total</span>
+                <span id="headingHr">
+                    <hr>
+                </span>
+            </div>
+            <div class="itemsList">
+            </div>
+            <div class="total"></div>
+        </div>
+    </section>
+    <!-- Shipping -->
+    <section class="shipping">
+      <div class="shippingContainer">
+        <div class="shippingMode">
+          <h3>Choose shipping mode:</h3>
+          <h4>
+            <div class="filter-checkbox">
+              <input type="radio" class="inStock" name="deliveryMode" value="0.00" onchange="displaySelectedValue()" checked>
+              <label for="inStock">Free Delivery (5 working days) </label>
+            </div>
+          </h4>
+          <h4>
+            <div class="filter-checkbox">
+              <input type="radio" class="outOfStock" name="deliveryMode" value="10.00" onchange="displaySelectedValue()">
+              <label for="outOfStock">Fast Delivery (Same day) .$10.00 </label>
+            </div>
+          </h4>
+          <h5 class="address">At IIT Kharagpur</h5>
+        </div>
+        <div class="grandTotal">
+          <div class="subTotal">
+            <h4>SUBTOTAL</h4>
+            <h4 id="bookTotal">$140</h4>
+          </div>
+          <div class="shippingCharge">
+            <h4>SHIPPING</h4>
+            <h4 id="deliveryCharge">$0.00</h4>
+          </div>
+          <div class="totalCost">
+            <h3>TOTAL</h3>
+            <h3 id="sum">$0</h3>
+          </div>
+          <div class="checkOut">
+            <button><i class='bx bx-cart'></i>Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Subscribe -->
+    <section class="subscribe">
+        <h1>Subscribe to our newsletter</h1>
+        <form action="">
+            <input type="email" class="emailinput">
+            <input type="submit" class="submitinput" value="Subscribe">
+        </form>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="f-r1">
+            <div class="f-column">
+                <h4>Books</h4>
+                <ul class="unstyled">
+                    <li>Whispers of Wisdom</li>
+                    <li>Adventures Beyond</li>
+                    <li>Treasure Island</li>
+                    <li>War and Peace</li>
+                    <li>Madness of Mask</li>
+                </ul>
+            </div>
+            <div class="f-column">
+                <h4>Contact Us</h4>
+                <ul class="unstyled">
+                    <li>IIT Kharagpur, West Bengal, India</li>
+                    <li>IIT Kharagpur, West Bengal, India</li>
+                    <a href="mailto:Sujal@example.com">
+                        <li><i class='bx bx-envelope'></i>Sujal@example.com</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="f-column">
+                <h3>Elysian</h3>
+                <p>
+                    Elegance of being is effortless. It is born, not cultivated, and as impossible to disguise as it is
+                    to imitate.
+                </p>
+                <h4 class="cellno">+1 234 567 890</h4>
+                <div class="social-icons">
+                    <a href=""><i class='bx bxl-github'></i></a>
+                    <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                    <a href=""><i class='bx bxl-linkedin'></i></a>
+                    <a href=""><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+            <div class="f-column">
+                <h4>Menu</h4>
+                <ul class="unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Cart</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li class="mode">Dark mode</li>
+                </ul>
+            </div>
+            <div class="f-column">
+                <h4>Your Account</h4>
+                <ul class="unstyled">
+                    <li><a href="">New Account</a></li>
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Register</a></li>
+                    <li><a href="">Cart</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="f-r2">
+            <hr>
+            © 2023, Elysian.github.io, Sujal Kaware
+        </div>
+    </footer>
+    <!-- Script -->
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>
